@@ -14,6 +14,7 @@
 
     <!-- Custom styles for this template -->
     <link rel="stylesheet" type="text/css" href="/static/css/base.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/parceiros.css">
 
 </head>
 
@@ -37,7 +38,7 @@
                     </li>
                 </ul>
                 <ul class="navbar-nav ml-auto logout">
-                    
+                
                     <li class="nav-item">
                         <a class="nav-link" href="/logout">Sair</a>
                     </li>
@@ -46,58 +47,29 @@
         </nav>
     </div>
     <div class="content">
-        <div class="container flex">
-            <h4 class="orders subtitle">Leonardo Romanini | RACF: lehenro</h4>
-        </div>
-
-        <div class="container form-group">
-            <label for="parceiro">Parceiro</label>
-            <select class="form-control" id="parceiro">
-                <option disabled selected>Selecione</option>
-                <option>Leonardo Romanini</option>
-            </select>
-        </div>
-
         <div class="container space-around flex">
-            <h5 class="orders subtitle text-center">TOP 10 Parceiros</h5>
+            <h5 class="orders subtitle text-center">Visão Detalhada</h5>
         </div>
-
-
-        <div class="container table-responsive">
-            <table id="orders" class="table table-striped orders table-center">
-                <thead>
-                <tr>
-                    <th scope="col"></th>
-                    <th scope="col">Parceiro</th>
-                    <th scope="col">Volume Transacional</th>
-                </tr>
-                </thead>
-                <tbody>
-                <tr>
-                    <th scope="row"></th>
-                    <td>Parceiro 1</td>
-                    <td>568.254</td>
-                </tr>
-                <tr>
-                    <th scope="row"></th>
-                    <td>Parceiro 2</td>
-                    <td>568.254</td>
-                </tr><tr>
-                    <th scope="row"></th>
-                    <td>Parceiro 3</td>
-                    <td>568.254</td>
-                </tr><tr>
-                    <th scope="row"></th>
-                    <td>Parceiro 4</td>
-                    <td>568.254</td>
-                </tr><tr>
-                    <th scope="row"></th>
-                    <td>Parceiro N</td>
-                    <td>568.254</td>
-                </tr>
-                
-                </tbody>
-            </table>
+        <div class="container">
+            <div class="callout callout-default">
+                <h4>Parceiro</h4>
+                Nome Parceiro / Volume Transacional.
+              </div>
+              
+              <div class="callout callout-success">
+                <h4>Successo</h4>
+                <p class="h4">1817</p>
+              </div>
+              
+              <div class="callout callout-warning">
+                <h4>Falhas</h4>
+                <p class="h4">1817</p>
+              </div>
+              
+              <div class="callout callout-danger">
+                <h4>Fraudes</h4>
+                <p class="h4">1817</p>
+              </div>
         </div>
 
     </div>
