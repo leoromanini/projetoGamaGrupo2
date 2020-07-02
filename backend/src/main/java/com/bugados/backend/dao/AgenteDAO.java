@@ -8,6 +8,6 @@ import com.bugados.backend.model.Agente;
 
 public interface AgenteDAO extends CrudRepository<Agente, Integer>{
 
-	public List<Agente> findTop10ByVolumeTransacional();
+
 	
 }
