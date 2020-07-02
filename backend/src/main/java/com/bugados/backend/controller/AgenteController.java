@@ -24,7 +24,18 @@ public class AgenteController {
 		return listaAgentes;
 	}
 	
-
+	@GetMapping("/agentes2")
+	public ArrayList<Agente>listarAgentes2(){
+		ArrayList<Agente> listaAgentes = (ArrayList<Agente>) dao.findNome2();
+		return listaAgentes;
+	}
+	
+	@GetMapping("/agentes3")
+	public ArrayList<Agente> listarAgentes3(){
+		ArrayList<Agente> listaAgentes = (ArrayList<Agente>) dao.findAll();
+		
+		return listaAgentes;
+	}
 }
 
 

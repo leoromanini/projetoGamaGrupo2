@@ -30,9 +30,9 @@ public class Agente {
 	@Column(name="volume_transacional")
 	private float volumeTransacional;
 	
-	@JsonIgnoreProperties("ag_financeiro")
-	@OneToMany(mappedBy = "agFinanceiro", cascade = CascadeType.ALL)
-	private List<Transacao> listaTransacao;
+	//@JsonIgnoreProperties("ag_financeiro")
+	//@OneToMany(mappedBy = "agFinanceiro", cascade = CascadeType.ALL)
+	//private List<Transacao> listaTransacao;
 
 	public int getIdAgente() {
 		return idAgente;
@@ -57,14 +57,14 @@ public class Agente {
 	public void setVolumeTransacional(float volumeTransacional) {
 		this.volumeTransacional = volumeTransacional;
 	}
-
+	/*
 	public List<Transacao> getListaTransacao() {
 		return listaTransacao;
 	}
 
 	public void setListaTransacao(List<Transacao> listaTransacao) {
 		this.listaTransacao = listaTransacao;
-	}	
+	}	*/
 	
 	
 	
