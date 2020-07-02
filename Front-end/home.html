@@ -39,7 +39,7 @@
                 <ul class="navbar-nav ml-auto logout">
                     
                     <li class="nav-item">
-                        <a class="nav-link" href="/logout">Sair</a>
+                        <a class="nav-link" onclick="logout()" style="cursor: pointer;">Sair</a>
                     </li>
                 </ul>
             </div>
@@ -47,13 +47,16 @@
     </div>
     <div class="content">
         <div class="container flex">
-            <h4 class="orders subtitle">Leonardo Romanini | RACF: lehenro</h4>
+            <h5 class="orders subtitle"><p id="user"></p>&nbsp;| RACF: <p id="racf">lehenro</p></h5>
         </div>
 
         <div class="container form-group">
             <label for="parceiro">Parceiro</label>
             <select class="form-control" id="parceiro">
                 <option disabled selected>Selecione</option>
+                <option>Leonardo Romanini</option>
+                <option>Leonardo Romanini</option>
+                <option>Leonardo Romanini</option>
                 <option>Leonardo Romanini</option>
             </select>
         </div>
@@ -119,5 +122,8 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
         integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
         crossorigin="anonymous"></script>
+
+<script src="/static/js/home.js"></script>
+<script src="/static/js/base.js"></script>
 
 </html>
