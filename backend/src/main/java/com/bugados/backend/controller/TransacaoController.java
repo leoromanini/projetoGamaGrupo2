@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.bugados.backend.dao.TransacaoDAO;
+import com.bugados.backend.model.ListaStatus;
 import com.bugados.backend.model.Transacao;
 
 
@@ -35,6 +36,17 @@ public class TransacaoController {
 	@PostMapping("/transacoesagente")
 	public ResponseEntity<ArrayList<Transacao>> login(@RequestBody Transacao ag_financeiro) {
 		ArrayList<Transacao> listaAg = (ArrayList<Transacao>) dao.findTransacao(ag_financeiro.getAgFinanceiro());
+		if(!listaAg.isEmpty()) {
+			return ResponseEntity.ok(listaAg);
+		}else {
+			return ResponseEntity.notFound().build();
+
+		}
+	}
+	
+	@PostMapping("/transacoesstatus")
+	public ResponseEntity<ArrayList<ListaStatus>> status(@RequestBody Transacao ag_financeiro) {
+		ArrayList<ListaStatus> listaAg = (ArrayList<ListaStatus>)  dao.findStatus(ag_financeiro.getAgFinanceiro());
 		if(!listaAg.isEmpty()) {
 			return ResponseEntity.ok(listaAg);
 		}else {
