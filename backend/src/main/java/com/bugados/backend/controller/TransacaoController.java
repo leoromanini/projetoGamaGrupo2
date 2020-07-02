@@ -11,7 +11,6 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.bugados.backend.dao.TransacaoDAO;
-import com.bugados.backend.model.ListaStatus;
 import com.bugados.backend.model.Transacao;
 
 
@@ -44,16 +43,7 @@ public class TransacaoController {
 		}
 	}
 	
-	@PostMapping("/transacoesstatus")
-	public ResponseEntity<ArrayList<ListaStatus>> status(@RequestBody Transacao ag_financeiro) {
-		ArrayList<ListaStatus> listaAg = (ArrayList<ListaStatus>)  dao.findStatus(ag_financeiro.getAgFinanceiro());
-		if(!listaAg.isEmpty()) {
-			return ResponseEntity.ok(listaAg);
-		}else {
-			return ResponseEntity.notFound().build();
 
-		}
-	}
 }
 
 
