@@ -1,6 +1,7 @@
 package com.bugados.backend.controller;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
@@ -18,10 +19,12 @@ public class AgenteController {
 	private AgenteDAO dao;
 	
 	@GetMapping("/agentes")
-	public ArrayList<Agente> listarTudo(){
-		ArrayList<Agente> lista = (ArrayList<Agente>) dao.findAll();
-		return lista;
+	public List<Object[]> listarAgentes(){
+		List<Object[]> listaAgentes = dao.findNome();
+		return listaAgentes;
 	}
 	
 
 }
+
+

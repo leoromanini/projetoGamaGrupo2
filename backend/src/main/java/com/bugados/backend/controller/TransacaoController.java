@@ -1,6 +1,7 @@
 package com.bugados.backend.controller;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -12,6 +13,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.bugados.backend.dao.TransacaoDAO;
 import com.bugados.backend.model.Transacao;
+import com.bugados.backend.model.TransacaoStatus;
 
 
 @CrossOrigin(origins = "*")
@@ -42,7 +44,18 @@ public class TransacaoController {
 
 		}
 	}
-	
+
+	@PostMapping("/transacoesstatus")
+	public List<Object[]> status(@RequestBody Transacao ag_financeiro) {
+		List<Object[]> listaStatus = dao.findStatus(ag_financeiro.getAgFinanceiro());
+		System.out.println(ag_financeiro.getAgFinanceiro());
+		if(!listaStatus.isEmpty()) {
+			return listaStatus;
+		}else {
+			return null;
+
+		}
+	}
 
 }
 
