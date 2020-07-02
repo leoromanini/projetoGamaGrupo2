@@ -20,16 +20,5 @@ public class TransacaoStatusController {
 	@Autowired //injeção da dependência - não precisa implementar pois o framework cria
 	private TransacaoStatusDAO dao;
 	
-	
-	@PostMapping("/transacoesstatus")
-	public ResponseEntity<ArrayList<TransacaoStatus>> status(@RequestBody Transacao ag_financeiro) {
-		ArrayList<TransacaoStatus> listaStatus = (ArrayList<TransacaoStatus>) dao.findStatus(ag_financeiro.getAgFinanceiro());
-		System.out.println(ag_financeiro.getAgFinanceiro());
-		if(!listaStatus.isEmpty()) {
-			return ResponseEntity.ok(listaStatus);
-		}else {
-			return ResponseEntity.notFound().build();
 
-		}
-	}
 }
