@@ -22,10 +22,6 @@ public class AgenteController {
 		ArrayList<Agente> lista = (ArrayList<Agente>) dao.findAll();
 		return lista;
 	}
-	/*
-	@GetMapping("/agentestop10")
-	public ArrayList<Agente> listarTop10(){
-		ArrayList<Agente> lista = (ArrayList<Agente>) dao.findTop10ByVolumeTransacional();
-		return lista;
-	}*/
+	
+
 }
