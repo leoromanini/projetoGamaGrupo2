@@ -32,6 +32,13 @@ public class AgenteController {
 	
 	@GetMapping("/agentes3")
 	public ArrayList<Agente> listarAgentes3(){
+		ArrayList<Agente> listaAgentes = (ArrayList<Agente>) dao.findNome3();
+		
+		return listaAgentes;
+	}
+	
+	@GetMapping("/agentes4")
+	public ArrayList<Agente> listarAgentes4(){
 		ArrayList<Agente> listaAgentes = (ArrayList<Agente>) dao.findAll();
 		
 		return listaAgentes;

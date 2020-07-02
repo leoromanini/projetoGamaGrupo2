@@ -18,4 +18,6 @@ public interface AgenteDAO extends CrudRepository<Agente, Integer>{
     @Query("select a from Agente a order by a.volumeTransacional desc")
    	public ArrayList<Agente> findNome2();	
    	
+    @Query("select a from Agente a order by a.nomeAgente")
+   	public ArrayList<Agente> findNome3();
 }
