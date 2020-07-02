@@ -16,7 +16,7 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 public class Transacao {
 	
 	@Id
-	@GeneratedValue(strategy=GenerationType.IDENTITY) // Consideramos que não vamos implementar update de tabela
+	//@GeneratedValue(strategy=GenerationType.IDENTITY)  Consideramos que não vamos implementar update de tabela
 	@Column(name="id_transacao")
 	private int idTransacao;
 	

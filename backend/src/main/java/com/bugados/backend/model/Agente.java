@@ -22,7 +22,7 @@ public class Agente {
 
 	
 	@Id
-	@GeneratedValue(strategy=GenerationType.IDENTITY) // Consideramos que não vamos implementar update de tabela
+	//@GeneratedValue(strategy=GenerationType.IDENTITY) Consideramos que não vamos implementar update de tabela
 	@Column(name="id_agente")
 	private int idAgente;
 	
