@@ -49,21 +49,21 @@
         <div class="container flex">
             <h5 class="orders subtitle"><p id="user"></p>&nbsp;| RACF: <p id="racf"></p></h5>
         </div>
-
+    
         <div class="container form-group">
             <label for="parceiro">Parceiro</label>
-            <select class="form-control" id="parceiro" onchange="">
+            <select class="form-control" id="parceiro" onchange="solicitarParceiro()">
                 <option disabled selected>Selecione</option>
-                <option>CARREFOUR Credito Master</option>
-                <option>EXTRA Cartoes VISA</option>
-                <option>HIPERCARD</option>
-                <option>ITAU Virtual</option>
-                <option>ITAU/Uniclass Cards</option>
-                <option>MAGALU Financeira</option>
-                <option>PICPAY Cartoes</option>
-                <option>SAMS CLUB Mastercard</option>
-                <option>SANTANDER Cartoes</option>
-                <option>SUBMARINO Cartoes</option>
+                <option value="10">CARREFOUR Credito Master</option>
+                <option value="9">EXTRA Cartoes VISA</option>
+                <option value="5">HIPERCARD</option>
+                <option value="6">ITAU Virtual</option>
+                <option value="3">ITAU/Uniclass Cards</option>
+                <option value="1">MAGALU Financeira</option>
+                <option value="7">PICPAY Cartoes</option>
+                <option value="8">SAMS CLUB Mastercard</option>
+                <option value="2">SANTANDER Cartoes</option>
+                <option value="4">SUBMARINO Cartoes</option>
             </select>
         </div>
 
@@ -82,28 +82,6 @@
                 </tr>
                 </thead>
                 <tbody>
-                <tr>
-                    <th scope="row"></th>
-                    <td>Parceiro 1</td>
-                    <td>568.254</td>
-                </tr>
-                <tr>
-                    <th scope="row"></th>
-                    <td>Parceiro 2</td>
-                    <td>568.254</td>
-                </tr><tr>
-                    <th scope="row"></th>
-                    <td>Parceiro 3</td>
-                    <td>568.254</td>
-                </tr><tr>
-                    <th scope="row"></th>
-                    <td>Parceiro 4</td>
-                    <td>568.254</td>
-                </tr><tr>
-                    <th scope="row"></th>
-                    <td>Parceiro N</td>
-                    <td>568.254</td>
-                </tr>
                 
                 </tbody>
             </table>

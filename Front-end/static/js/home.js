@@ -28,3 +28,39 @@ function preencher(res){
 }
 
 carregarDados();
+
+function solicitarParceiro(){
+    var e = document.getElementById("parceiro");
+    var idParceiro = e.options[e.selectedIndex].value;
+
+    localStorage.setItem("nome",e.options[e.selectedIndex].innerHTML);
+
+    let parceirosMsg = {
+        agFinanceiro: idParceiro
+    }
+
+    let cabecalho = {
+        method: 'POST',
+        body: JSON.stringify(parceirosMsg),
+        headers: {
+            'Content-Type': 'application/json'
+        }
+    }
+
+    fetch("http://localhost:8080/transacoesstatus", cabecalho)
+        .then(res => tratarReposta(res));
+
+}
+
+function tratarReposta(res){
+    res.json().then(res => setarStatus(res));
+    
+}
+
+function setarStatus(res){
+    localStorage.setItem("sucesso",String(res[0]).split(",")[0]);
+    localStorage.setItem("falha",String(res[1]).split(",")[0]);
+    localStorage.setItem("fraude",String(res[2]).split(",")[0]);
+    location.href = "parceiros.html"
+}
+
