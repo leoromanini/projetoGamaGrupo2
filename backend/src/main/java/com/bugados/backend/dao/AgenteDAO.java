@@ -10,6 +10,7 @@ import com.bugados.backend.model.Agente;
 
 
 
+
 public interface AgenteDAO extends CrudRepository<Agente, Integer>{
 	
     @Query("select a.nomeAgente, a.volumeTransacional from Agente a order by a.volumeTransacional desc")
@@ -20,4 +21,7 @@ public interface AgenteDAO extends CrudRepository<Agente, Integer>{
    	
     @Query("select a from Agente a order by a.nomeAgente")
    	public ArrayList<Agente> findNome3();
+    
+    @Query("SELECT a FROM Agente a WHERE a.idAgente = :id_Agente")
+	public ArrayList<Agente> findTransacao(int id_Agente);
 }
