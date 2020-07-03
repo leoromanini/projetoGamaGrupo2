@@ -34,13 +34,13 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item active">
-                        <a class="nav-link" href="#">Inicio</a>
+                        <a class="nav-link" onclick="homePage()" style="cursor: pointer;">Inicio</a>
                     </li>
                 </ul>
                 <ul class="navbar-nav ml-auto logout">
                 
                     <li class="nav-item">
-                        <a class="nav-link" href="/logout">Sair</a>
+                        <a class="nav-link" onclick="logout()" style="cursor: pointer;">Sair</a>
                     </li>
                 </ul>
             </div>
@@ -53,7 +53,8 @@
         <div class="container">
             <div class="callout callout-default">
                 <h4>Parceiro</h4>
-                Nome Parceiro / Volume Transacional.
+                <div id="nome" class="h4"></div>
+                <div id="volume" class="h4"></div>
               </div>
               
               <div class="callout callout-success">
@@ -93,5 +94,6 @@
         crossorigin="anonymous"></script>
     
 <script src="/static/js/parceiros.js"></script>
+<script src="/static/js/base.js"></script>
 
 </html>

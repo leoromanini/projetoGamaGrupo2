@@ -36,7 +36,8 @@ function solicitarParceiro(){
     localStorage.setItem("nome",e.options[e.selectedIndex].innerHTML);
 
     let parceirosMsg = {
-        agFinanceiro: idParceiro
+        agFinanceiro: idParceiro,
+        idAgente: idParceiro 
     }
 
     let cabecalho = {
@@ -47,10 +48,26 @@ function solicitarParceiro(){
         }
     }
 
+    fetch("http://localhost:8080/agentetransacao", cabecalho)
+        .then(res => tratarVolumetria(res));
+
     fetch("http://localhost:8080/transacoesstatus", cabecalho)
         .then(res => tratarReposta(res));
 
 }
+
+function tratarVolumetria(res){
+    res.json().then(res => persistirVolume(res));
+}
+
+function persistirVolume(res){
+    localStorage.setItem("volumetria", JSON.stringify(res));
+    let volumetria = localStorage.getItem("volumetria");
+
+    let volume = JSON.parse(volumetria);
+    localStorage.setItem("volume", volume[0].volumeTransacional);
+}
+
 
 function tratarReposta(res){
     res.json().then(res => setarStatus(res));
